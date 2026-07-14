@@ -1,8 +1,30 @@
+add_library(Vendor STATIC)
+target_sources(Vendor
+  PRIVATE
+    lib/Vendor.cxx
+
+  PUBLIC
+    FILE_SET HEADERS
+    FILES
+      include/Vendor.h
+)
+
+target_include_directories(Vendor
+  PUBLIC
+    include
+)
+
+target_compile_features(Vendor PRIVATE cxx_std_20)
+
 add_library(VendorLib INTERFACE)
 target_compile_definitions(VendorLib INTERFACE TUTORIAL_USE_VENDORLIB)
 
-# TODO11: Add the include directory to VendorLib
+target_include_directories(VendorLib
+  INTERFACE
+    include
+)
 
-# TODO12: Add the lib directory to VendorLib
-
-# TODO13: Add the Vendor archive to VendorLib
+target_link_libraries(VendorLib
+  INTERFACE
+    Vendor
+)

@@ -6,6 +6,11 @@ target_sources(Tutorial
 )
 
 # TODO14: Add VendorLib to Tutorial
+target_link_libraries(Tutorial
+  PRIVATE
+    MathFunctions
+    VendorLib
+)
 
 target_link_libraries(Tutorial
   PRIVATE
@@ -13,7 +18,7 @@ target_link_libraries(Tutorial
 )
 
 # TODO4: Add a compile feature for C++20 support to Tutorial
-
+target_compile_features(Tutorial PRIVATE cxx_std_20)
 
 if(
   (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC") OR
@@ -21,6 +26,7 @@ if(
 )
 
   # TODO9: Add the /W3 compile flag to Tutorial
+  target_compile_options(Tutorial PRIVATE /W3)
 
 elseif(
   (CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
@@ -28,6 +34,6 @@ elseif(
 )
 
   # TODO10: Add the -Wall compile flag to Tutorial
-
+  target_compile_options(Tutorial PRIVATE -Wall)
 
 endif()
