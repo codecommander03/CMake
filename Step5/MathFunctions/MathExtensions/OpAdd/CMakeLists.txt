@@ -9,3 +9,5 @@ target_sources(OpAdd
     FILES
       OpAdd.h
 )
+
+target_include_directories(OpAdd PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")

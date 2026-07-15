@@ -9,3 +9,5 @@ target_sources(OpSub
     FILES
       OpSub.h
 )
+
+target_include_directories(OpSub PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")

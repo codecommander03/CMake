@@ -9,3 +9,5 @@ target_sources(OpMul
     FILES
       OpMul.h
 )
+
+target_include_directories(OpMul PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
