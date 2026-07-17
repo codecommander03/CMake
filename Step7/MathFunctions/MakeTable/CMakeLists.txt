@@ -1,6 +1,11 @@
 # TODO1: Add a MakeTable executable
+add_executable(MakeTable)
 
 # TODO2: Add MakeTable.cxx to the MakeTable executable
+target_sources(MakeTable
+  PRIVATE
+    MakeTable.cxx
+)
 
 # TODO3: Add a custom command which invokes MakeTable to generate SqrtTable.h
 
