@@ -8,8 +8,15 @@ target_sources(MakeTable
 )
 
 # TODO3: Add a custom command which invokes MakeTable to generate SqrtTable.h
+add_custom_command(
+  OUTPUT SqrtTable.h
+  COMMAND MakeTable SqrtTable.h
+  DEPENDS MakeTable
+  VERBATIM
+)
 
 # TODO4: Add a custom target which depends on SqrtTable.h
+add_custom_target(RunMakeTable DEPENDS SqrtTable.h)
 
 # TODO5: Add an INTERFACE library to describe the SqrtTable header
 
