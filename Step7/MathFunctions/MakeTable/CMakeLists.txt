@@ -19,6 +19,7 @@ add_custom_command(
 add_custom_target(RunMakeTable DEPENDS SqrtTable.h)
 
 # TODO5: Add an INTERFACE library to describe the SqrtTable header
+add_library(SqrtTable INTERFACE)
 
 # TODO6: Add the current binary directory (and optionally the SqrtTable.h FILE)
 #        to a header file set of the interface library
