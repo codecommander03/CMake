@@ -27,3 +27,4 @@ add_custom_target(RunMakeTable DEPENDS SqrtTable.h)
 
 # TODO7: Use add_dependencies to ensure the custom target always runs before
 #        targets that depend on the interface library
+add_dependencies(SqrtTable RunMakeTable)
