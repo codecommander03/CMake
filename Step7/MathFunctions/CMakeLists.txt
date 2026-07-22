@@ -14,6 +14,7 @@ target_sources(MathFunctions
 target_link_libraries(MathFunctions
   PRIVATE
     MathLogger
+    SqrtTable
 
   PUBLIC
     OpAdd
