@@ -52,4 +52,6 @@ endif()
 
 add_subdirectory(MathLogger)
 add_subdirectory(MathExtensions)
+
 # TODO9: Add the MakeTable subdirectory to the project
+add_subdirectory(MakeTable)
